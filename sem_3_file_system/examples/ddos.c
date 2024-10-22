@@ -9,13 +9,12 @@ int maxFd() {
 
 void ddos() {
 	int max_fd = maxFd();
-	for (int i = 0; i < max_fd - 4; ++i) {
+	for (int i = 0; i < max_fd - 3; ++i) {
 		open("foo.txt", O_RDONLY);
 	}
 }
 
-int main()
-{
+int main() {
 	printf("Max fd = %d\n", maxFd());
 	ddos();
 
