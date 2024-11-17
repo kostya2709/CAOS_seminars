@@ -1,0 +1,6 @@
+a.out
+dup.c
+dup2.c
+file
+fork.c
+output.txt
