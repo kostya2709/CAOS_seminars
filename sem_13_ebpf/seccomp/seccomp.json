@@ -1,0 +1,23 @@
+{
+  "defaultAction": "SCMP_ACT_ERRNO",
+  "syscalls": [
+    {
+      "names": [
+        "write",
+        "exit_group",
+        "read",
+        "close",
+        "fstat",
+        "mmap",
+        "mprotect",
+        "munmap",
+        "brk",
+        "rt_sigaction",
+        "rt_sigprocmask",
+        "ioctl"
+      ],
+      "action": "SCMP_ACT_ALLOW"
+    }
+  ]
+}
+

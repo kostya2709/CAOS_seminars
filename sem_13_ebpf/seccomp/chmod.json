@@ -1,0 +1,9 @@
+{ 
+   "defaultAction":"SCMP_ACT_KILL",
+   "syscalls":[  
+      {  
+         "name":"chmod",
+         "action":"SCMP_ACT_KILL"
+      }
+   ]
+}
