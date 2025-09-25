@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <cstdint>
 #include <arpa/inet.h>
+#include <iostream>
 
 void print_bytes( void* ptr, int num) {
 	for (size_t i = 0; i < num; ++i) {

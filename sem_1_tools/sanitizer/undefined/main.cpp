@@ -8,7 +8,7 @@ int main()
     int overflow = 0x7fffffff;
     overflow += 3;
 
-    std::cout << overflow << '\n';
+    std::cout << std::hex << overflow << '\n';
 
     return 0;
 }

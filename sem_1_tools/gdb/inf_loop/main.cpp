@@ -1,10 +1,8 @@
 #include <iostream>
 
-int main()
-{
+int main() {
     bool cond = true;
-    while ( cond )
-    {
+    while ( cond ) {
         int a = 9;
         a++;        
     }

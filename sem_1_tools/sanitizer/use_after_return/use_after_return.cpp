@@ -1,7 +1,6 @@
 #include <iostream>
 
-char* get_str( const char* str)
-{
+char* get_str( const char* str) {
     const size_t LEN = 100;
     char array[LEN] = {};
     std::cout << "Address: " << &array[0] << '\n';
@@ -15,8 +14,7 @@ char* get_str( const char* str)
     return ret_ptr;
 }
 
-int main()
-{
+int main() {
     char hello[] = "Hello";
     char* updated_str = get_str( hello);
     std::cout << updated_str << "\n";
