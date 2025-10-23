@@ -37,7 +37,7 @@ int main() {
 	lseek(fd, 0, SEEK_SET);
 
 	// Map the file to memory
-    char* const map = mmap(NULL, map_size, PROT_READ | PROT_WRITE, /*MAP_PRIVATE | MAP_ANONYMOUS*/ MAP_SHARED, fd, 0);
+    char* const map = mmap(NULL, map_size, PROT_READ | PROT_WRITE, MAP_PRIVATE /*| MAP_ANONYMOUS MAP_SHARED*/, fd, 0);
     if (map == MAP_FAILED) {
         perror("Error mmapping the file");
         close(fd);
@@ -59,14 +59,17 @@ int main() {
 		}
 		read_buffer[bytes_read] = '\0';
 		
-		printf("File: %s\n", read_buffer);
-		printf("mmap: %s\n", map);
+		printf("File content: %s\n", read_buffer);
+		printf("mmap content: %s\n", map);
 		int msg_len = strlen(msg_buffer);
 
 		// Write the message to the mapped memory
 		memcpy(map, msg_buffer, msg_len);
 		map[msg_len] = '\0';
 		memset(msg_buffer, msg_len, 0);
+
+		// msync(map, msg_len, MS_SYNC);
+
 	}
 
     // Clean up

@@ -5,7 +5,7 @@ int main() {
 
 	printf("Start\n");
 
-	size_t N = 10000000;
+	size_t N = 100000000;
 	
 	int* ptr = malloc(sizeof(int) * N);
 	printf("ptr = %p\n", ptr);	

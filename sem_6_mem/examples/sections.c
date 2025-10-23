@@ -6,6 +6,8 @@ int global_init = 1; // data
 
 const int global_const = 5; // rodata
 
+static int global_static = 5; // data
+
 inline void foo() {
 	int x = 0;
 }

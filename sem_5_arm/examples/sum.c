@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-extern int sum(int n);
+/*extern*/ int sum(int n);
 
 int main() {
     int n = 0;

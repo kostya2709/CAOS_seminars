@@ -43,7 +43,7 @@ void overflow() {
 
 void division_by_zero() {
     printf("\n=== DIVISION BY ZERO ===\n");
-    feclearexcept(FE_ALL_EXCEPT);
+    // feclearexcept(FE_ALL_EXCEPT);
     
     double result = 1.0 / 0.0;
     printf("1.0 / 0.0 = %f\n", result);
@@ -62,8 +62,9 @@ void invalid_operation() {
 }
 
 int main() {
-    // Enable all floating-point exceptions
-	feenableexcept(FE_DIVBYZERO | FE_INVALID | FE_OVERFLOW | FE_UNDERFLOW);
+
+	// Enable all floating-point exceptions
+	// feenableexcept(FE_DIVBYZERO | FE_INVALID | FE_OVERFLOW | FE_UNDERFLOW);
     
     division_by_zero();
     invalid_operation();

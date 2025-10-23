@@ -1,5 +1,7 @@
+
+
 sum:
-	agcc sum_n.c sum_n.S
+	agcc sum.c sum.S
 
 io:
 	agcc io.S

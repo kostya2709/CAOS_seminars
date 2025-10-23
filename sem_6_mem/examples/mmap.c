@@ -2,8 +2,8 @@
 #include <sys/mman.h>
 
 int main() {
-  int N = 5;
-  int *ptr = mmap(NULL, N * sizeof(int), PROT_READ | PROT_WRITE,
+	int N = 5;
+	int *ptr = mmap(NULL, N * sizeof(int), PROT_READ | PROT_WRITE,
                   MAP_PRIVATE | MAP_ANONYMOUS, 1, 0);
 
   if (ptr == MAP_FAILED) {
